@@ -1,10 +1,10 @@
 const mysql = require("mysql")
 const con = mysql.createConnection({
-    host: process.env.DB_HOST || "localhost",
+    host: process.env.DB_HOST || "yamabiko.proxy.rlwy.net",
     user: process.env.DB_USER || "root",
-    password: process.env.DB_PASSWORD || "",
-    database: process.env.DB_NAME || "backendst2",
-    port: process.env.DB_PORT || 3306
+    password: process.env.DB_PASSWORD || "xsXJusgvZereNTfllxxFTRFKckcgZTmx",
+    database: process.env.DB_NAME || "railway",
+    port: process.env.DB_PORT || 53910
 });
 
 con.connect((err) => {

@@ -1,6 +1,6 @@
 const mysql = require("mysql")
 const con = mysql.createConnection({
-    host: process.env.DB_HOST || "yamabiko.proxy.rlwy.net",
+    host: process.env.DB_HOST || "mysql.railway.internal",
     user: process.env.DB_USER || "root",
     password: process.env.DB_PASSWORD || "xsXJusgvZereNTfllxxFTRFKckcgZTmx",
     database: process.env.DB_NAME || "railway",

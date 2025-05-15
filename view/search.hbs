@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body{
+        background-image: url("https://cdn.dribbble.com/users/935078/screenshots/3622876/pig.gif");
+      }
+      .head3{
+        justify-content: center;
+        text-align: center;
+        font-size: 50px;
+      }
+      .head2{
+        font-size: 30px;
+        margin-top: 1%;
+        padding: 2%;
+        justify-content: center;
+        text-align: center;
+      }
+      .head5{
+        margin-top: 3%;
+        font-size: 26px;
+       border-radius: 1%;
+       border-color: black;
+      }
+      .h33{
+        font-size: 26px;
+        text-align: center;
+        justify-content: center;
+        color: rgb(202, 240, 78);
+      }
+      .boxd{
+        justify-content: center;
+        text-align: center;
+      margin-left: 9%;
+        width: 70%;
+      }
+    </style>
+</head>
+<body>
+    <div class="boxd">
+      <form action="/searchstudent"  >
+   <h3 class="head3">SEARCH ACCOUNT</h3>
+   
+    <hr>
+ 
+    <label for="phone" class="head2"><b>Phone no</b></label>
+   <div class="head5"></div>> <input type="phone"  class="head5" placeholder="type phone no to be searched" name="phone" id="phone" required></div>
+
+    <div class="head2" ><button type="submit" class="registerbtn" class="head2">SEACRH ACCOUNT</button>
+    <a href="./" style="color:black" class="head2">BACK TO HOME PAGE</a></div>
+
+    <br>
+    
+   
+    
+
+     {{#if mesg1}}
+     {{#data}}
+      <form action="/searchstudent"  ></form>
+     <h3 class="h33">The &nbsp; Total&nbsp; Balance &nbsp;in&nbsp; {{name}} &nbsp;account  &nbsp;is &nbsp; {{amount}}</h3>
+     {{/data}}
+  
+    
+</form>
+     {{/if}}
+
+     {{#if mesg2}}
+     <h3>Data Not Found!</h3>
+     {{/if}}
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>body{
+          
+  background-image: url("https://cdn.dribbble.com/users/935078/screenshots/3622876/pig.gif");
+
+             
+             margin:2px;
+             }
+             .head1{
+               text-shadow: 1px 1px 2px rgb(248, 246, 246), 0 0 25px rgb(51, 173, 59), 0 0 5px rgb(227, 119, 203);
+                justify-content: center;
+                text-align: center;
+                font-size: 49px;
+                margin-top: -9px;
+                font-style: bold;
+                border-radius: 10px;
+                border-style: inset;
+                border-color: azure;
+             }
+             .dayt{
+              font-size: 20px;
+              color: aliceblue;
+             }
+             .menu
+             {
+                 
+                margin-left: 340px;
+                margin-right: 340px;
+              margin-top: 30px;
+               
+               justify-content: center;
+               
+             }
+             .alignn{
+                   display: flex;
+             flex-direction:row;
+             padding-bottom: 20px;
+             padding-top: 10px;
+             text-decoration: none;
+             text-align: center;
+             justify-content: center;
+                 font-size: 30px;
+                 font-weight: bolder;
+                 text-shadow: 1px 1px 2px rgb(248, 246, 246), 0 0 25px rgb(179, 72, 10), 0 0 5px rgb(215, 29, 23);
+                 color:rgb(240, 239, 239);
+             }
+             
+             
+             .menu1 a{
+               text-shadow: 1px 1px 2px rgb(248, 246, 246), 0 0 25px rgb(64, 189, 72), 0 0 5px rgb(28, 168, 53);
+              text-decoration: none;
+              color: aliceblue;
+
+             }
+             .ali{
+              display: flex;
+              flex-direction: row;
+              font-size: 38px;
+              margin-left: 16%;
+              margin-top: 3%;
+              text-decoration: none;
+              color:whitesmoke;
+            
+              
+             }
+             .menu a{
+                    text-decoration: none;
+                    color:rgb(240, 239, 239);
+             }
+    </style>
+</head>
+<body>
+  <div class="dayt"><p id="displayDateTime"></p></div>
+    <div class="head1">BANK &nbsp;  SYSTEM</div>
+       <div class="menu">
+
+          <div class="alignn"> <a href="/add">CREATE &nbsp;  ACCOUNT</a></div>
+          
+          <div class="alignn" ><a href="/search">SEARCH &nbsp;  ACCOUNT</a></div>
+          <div class="alignn"> <a href="/update">UPDATE &nbsp;  ACCOUNT</a></div>
+          <div class="alignn"> <a href="/delete">DELETE &nbsp;  ACCOUNT</a></div>
+            
+           <div class="alignn"><a href="/view">ALL&nbsp;  ACCOUNT</a></div>
+       </div>
+
+<div class="menu1">
+    <div class="ali"> <a href="/transaction">DEPOSIT &nbsp;  MONEY</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <a href="/withdraw">WITHDRAW&nbsp;  MONEY</a></div></div>
+
+
+        <script type="text/javascript">
+  var today = new Date();
+  var day = today.getDay();
+  var daylist = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var time = today.getHours() + ":" + today.getMinutes() ;
+  var dateTime = date+' '+time;
+   
+  document.getElementById("displayDateTime").innerHTML = dateTime + ' <br> Day :- ' + daylist[day];
+ 
+  </script>
+</body>
+</html>

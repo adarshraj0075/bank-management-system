@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+    <style>
+      body{
+        background-image: url("https://cdn.dribbble.com/users/935078/screenshots/3622876/pig.gif");
+      }
+      .head3{
+        justify-content: center;
+        text-align: center;
+        font-size: 30px;
+      }
+      .posi{
+       ;
+       
+         position: absolute;
+   
+    padding: -2px;
+    margin-left:10%;
+    
+    border-radius: 10px;
+      }
+       .head21{
+        font-size: 27px;
+        margin-top: 1%;
+        padding: 1%;
+        justify-content: center;
+        text-align: center;
+      }
+      .head2{
+        font-size: 20px;
+        
+        padding: 1%;
+        justify-content: center;
+        text-align: center;
+      }
+      .head5{
+       
+        font-size: 16px;
+       border-radius: 1%;
+       border-color: black;
+      }
+      .boxd{
+        justify-content: center;
+        text-align: center;
+      margin-left: 9%;
+        width: 70%;
+      }
+    </style>
+</head>
+<body>
+    <div class="boxd">
+      <form action="/updatesearch">
+   <h3 class="head3">SEARCH ACCOUNT</h3>
+   
+    <hr>
+ 
+    <label for="phone" class="head21"><b>Phone no</b></label>
+    <div class="head5"><input type="phone" style="width:200px;" placeholder="type phone no to be searched" name="phone" id="phone" required></div>
+
+    <div class="head2"><button type="submit" class="head2" class="registerbtn">SEACRH ACCOUNT</button>
+    <a href="./" style="color:black" class="head2">BACK TO HOME PAGE</a></div>
+
+    <br>
+   
+ {{#if umesg}}
+     <h3>Data updated!</h3>
+     {{/if}}
+
+     
+     {{#if mesg2}}
+     <h3>Data Not Found!</h3>
+     {{/if}}
+    </form>
+  </div>
+
+<!--Search form design end-->
+
+{{#if mesg1}}
+<div class="posi">
+       <div class="contaier">
+       <form action="/updatestudent"  >
+   <h3>UPDATE ACCOUNT</h3>
+   
+    <hr>
+{{#data}}
+    <label for="name"><b>Account name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" value="{{username}}" id="name" required>
+
+    <label for="phone"><b>Phone no</b></label>
+    <input type="phone" placeholder="Enter Phone Number" name="phone" value="{{phone}}" id="phone" required readonly>
+
+    <label for="email"><b>Email Id</b></label>
+    <input type="email" placeholder="Enter Email Id" name="email" value="{{email}}" id="email" required readonly>
+
+<label for="amount"><b>Amount To  Deposit</b></label>
+    <input type="amount" placeholder="enter the amount to deposit" name="amount" value="{{amount}}" id="amount" required>
+
+     <label for="address"><b>New Address</b></label>
+    <input type="address" placeholder="write new address" name="address" value="{{address}}" id="address" required>
+   
+  <div class="gender_g">
+     <strong>Gender</strong>
+     <input type="radio" name="gender" id="" value="Male"> Male
+     <input type="radio" name="gender" id=""  value="Female">  Female
+  </div>
+    <button type="submit" class="registerbtn">UPDATE ACCOUNT</button>
+{{/data}}
+  
+    <a href="./" style="color:black">BACK TO HOME PAGE</a> <br>
+     
+    
+</form>
+</div>
+</div>
+     
+      {{/if}}      
+</body>
+</html>

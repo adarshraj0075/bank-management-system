@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 const mysql = require("./connection").con
 app.set("view engine", "hbs");
 app.set("views", "./view")
@@ -243,9 +243,6 @@ app.get("/removestudent", (req, res) => {
     });
 });
 //Create Server
-app.listen(port, (err) => {
-    if (err)
-        throw err
-    else
-        console.log("Server is running at port %d:", port);
-});
+app.listen(port, '0.0.0.0', () => {
+    console.log(`✅ Server listening on http://0.0.0.0:${port}`);
+  });
